@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a;
+    int n, i = 1, imin, imax, max = -1;
+    
+    cin >> n;
+    
+    while(i <= n)
+    {
+        cin >> a;
+        
+        if(max < a)
+        {
+            imin = i;
+            imax = i;
+            max = a;
+        }
+        else if(max == a)
+        {
+            imax = i;
+        }
+        
+        i ++;
+    }
+    
+    cout << imin << " " << imax;
+}
